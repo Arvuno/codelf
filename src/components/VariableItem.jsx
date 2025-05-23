@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Label, Popup } from 'semantic-ui-react';
-import * as Tools from '../utils/Tools.js';
+import * as Tools from '../utils/Tools';
 
 export default function VariableItem(props) {
   const clipboardId = `clipboardId-${Tools.uuid()}`;

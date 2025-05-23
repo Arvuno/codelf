@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Tools from '../utils/Tools.js';
+import * as Tools from '../utils/Tools';
 
 const cnText = Tools.randomList([
   '颈椎病晚期', 

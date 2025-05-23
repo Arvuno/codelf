@@ -2,16 +2,16 @@ import React, { useEffect, useReducer, useCallback } from 'react';
 import { Container } from 'semantic-ui-react';
 import SearchBar from '../components/SearchBar.jsx';
 import TitleLogo from '../components/TitleLogo.jsx';
-import SearchCodeModel from '../models/SearchCodeModel.js';
-import HashHandler from '../utils/HashHandler.js';
+import SearchCodeModel from '../models/SearchCodeModel';
+import HashHandler from '../utils/HashHandler';
 import VariableList from '../components/VariableList.jsx';
 import SearchError from '../components/SearchError.jsx';
 import Loading from '../components/Loading.jsx';
 import Donate from '../components/Donate.jsx';
 import Suggestion from '../components/Suggestion.jsx';
 import SourceCode from '../components/SourceCode.jsx';
-import AppModel from '../models/AppModel.js';
-import DDMSModel from '../models/DDMSModel.js';
+import AppModel from '../models/AppModel';
+import DDMSModel from '../models/DDMSModel';
 import Doodle from '../components/Doodle.jsx';
 
 const actionTypes = {

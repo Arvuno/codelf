@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Button, Dropdown, Label } from 'semantic-ui-react';
-import * as Tools from '../utils/Tools.js';
+import * as Tools from '../utils/Tools';
 import Loading from "./Loading";
 import useCodeHighlighting from './hooks/useCodeHighlighting';
 

@@ -1,6 +1,6 @@
 import React, { useMemo, useRef } from 'react';
-import * as Tools from '../utils/Tools.js';
-import VariableItem from './VariableItem';
+import * as Tools from '../utils/Tools';
+import VariableItem from './VariableItem.jsx';
 
 const notFound = val => val && /59ce9297fba93aeb9d693a2f61922fb6|bfd876277827a33f49d363e8857977a0/g.test(Tools.MD5(val));
 const notFoundImg = '//user-images.githubusercontent.com/799578/50722775-1a9a1d00-110f-11e9-9bcc-efe5465a4ad5.jpg';

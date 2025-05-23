@@ -24,18 +24,18 @@
 // cache, then increment the CACHE_VERSION value. It will kick off the service worker update
 // flow and the old cache(s) will be purged as part of the activate event handler when the
 // updated service worker is activated.
-var CACHE_VERSION = '1747970002723';
+var CACHE_VERSION = '_BUILD_VERSION_';
 var CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
 
-var INCLUDED = ["searchcode.com/api","api.github.com","rest.smapi.io","localhost"];
+var INCLUDED = [_INCLUDED_];
 
-var CACHE_ONLY = [];
+var CACHE_ONLY = [_CACHE_ONLY_];
 
-var NETWORK_ONLY = ["searchcode.com/api"];
+var NETWORK_ONLY = [_NETWORK_ONLY_];
 
-var EXCLUDED = ["livereload","localhost:35729"];
+var EXCLUDED = [_EXCLUDED_];
 
 function matchLocation(url, caches) {
   return caches.find(function (l) {
@@ -47,7 +47,7 @@ self.addEventListener('install', function (event) {
   self.skipWaiting(); // make new service worker activate ASAP
   var now = Date.now();
 
-  var urlsToPrefetch = ['/css/app.css','/css/app.f1364fce.css','/css/lib.b0f67b98.css','/css/lib.css','/css/themes/default/assets/fonts/brand-icons.eot','/css/themes/default/assets/fonts/brand-icons.svg','/css/themes/default/assets/fonts/brand-icons.ttf','/css/themes/default/assets/fonts/brand-icons.woff','/css/themes/default/assets/fonts/brand-icons.woff2','/css/themes/default/assets/fonts/icons.eot','/css/themes/default/assets/fonts/icons.svg','/css/themes/default/assets/fonts/icons.ttf','/css/themes/default/assets/fonts/icons.woff','/css/themes/default/assets/fonts/icons.woff2','/css/themes/default/assets/fonts/outline-icons.eot','/css/themes/default/assets/fonts/outline-icons.svg','/css/themes/default/assets/fonts/outline-icons.ttf','/css/themes/default/assets/fonts/outline-icons.woff','/css/themes/default/assets/fonts/outline-icons.woff2','/css/themes/default/assets/images/flags.png','/ddms_frame_callback.html','/fonts/Dressedless_Three.svg','/fonts/Dressedless_Three.ttf','/fonts/LatoLatin-Bold.woff2','/fonts/LatoLatin-BoldItalic.woff2','/fonts/LatoLatin-Italic.woff2','/fonts/LatoLatin-Regular.woff2','/fonts/fontawesome-webfont.eot','/fonts/fontawesome-webfont.svg','/fonts/fontawesome-webfont.ttf','/fonts/fontawesome-webfont.woff','/fonts/fontawesome-webfont.woff2','/images/codelf_logo.f4ae25bd.png','/images/codelf_logo.png','/images/paypal.69412e83.png','/images/paypal.png','/images/twohardtings.0db8462a.jpg','/images/twohardtings.jpg','/images/wechatdonate.3ba3a9d8.jpg','/images/wechatdonate.jpg','/images/wechatpay.5f11f80c.jpg','/images/wechatpay.jpg','/images/zhifubao.70c19370.png','/images/zhifubao.png','/index.html','/js/app.792fa086.js','/js/app.js','/js/lib.5e430a5b.js','/js/lib.js','/sw.js'];
+  var urlsToPrefetch = [_FILES_];
 
   // All of these logging statements should be visible via the "Inspect" interface
   // for the relevant SW accessed via chrome://serviceworker-internals
