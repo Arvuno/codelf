@@ -1,7 +1,7 @@
 import React from 'react';
-import MainContainer from './containers/MainContainer';
-import NoticeContainer from './containers/NoticeContainer';
-import NavBarContainer from './containers/NavBarContainer';
+import MainContainer from './containers/MainContainer.jsx';
+import NoticeContainer from './containers/NoticeContainer.jsx';
+import NavBarContainer from './containers/NavBarContainer.jsx';
 
 export default function App() {
   return (

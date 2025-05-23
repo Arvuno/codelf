@@ -1,12 +1,78 @@
-# React + Vite
+# CODELF
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Codelf is a search tool that helps developers solve the naming things problem.
 
-Currently, two official plugins are available:
+> There are only two hard things in Computer Science: cache invalidation and naming things.
+> -- Phil Karlton
+> 
+> ![twohardtings](https://user-images.githubusercontent.com/799578/50461922-8b9ecc80-09bc-11e9-85cc-3714aaa0e836.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+Before you begin, ensure you have the following installed:
+- Node.js (v16.x or higher)
+- npm (v8.x or higher) or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development
+
+To start the development server:
+
+```bash
+# Install dependencies
+npm install 
+# or 
+yarn
+
+# Start the development server
+npm run dev
+# or
+yarn dev
+```
+
+This will start the development server using Vite at http://localhost:3000.
+
+## Build for Production
+
+To build the application for production:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The build output will be in the `dist` directory.
+
+## Preview Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Features
+
+- Search over GitHub, Bitbucket, GitLab to find real-world usage variable names
+- Language specific search
+- Support for multiple languages
+- Automatic translation for Chinese searches
+- Browser extensions for VS Code, Atom, Sublime Text, and more
+
+## Browser Extensions
+
+- [CODELF for VS Code](https://github.com/unbug/codelf#codelf-for-vs-code)
+- [CODELF for Atom](https://atom.io/packages/codelf)
+- [CODELF for Sublime Text](https://github.com/unbug/codelf#codelf-for-sublime-text)
+- [CODELF for WebStorm](https://github.com/unbug/codelf/issues/24)
+- [CODELF for Alfred](https://github.com/unbug/codelf/issues/63)
+
+## Credits
+
+- Created by [unbug](https://github.com/unbug)
+
+## License
+
+MIT
