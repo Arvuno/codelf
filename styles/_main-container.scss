@@ -110,6 +110,8 @@
     }
 
     &__input {
+      height: 56px;
+      font-size: 1.3em;
       background: #F1F3F4;
       border-radius: 5rem;
       transition: box-shadow 350ms $anim-cubic-bezier;
@@ -119,6 +121,7 @@
       }
 
       input {
+        height: 56px !important;
         background: #F1F3F4;
         border-radius: 5rem;
         border: 0 !important;
