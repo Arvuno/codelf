@@ -10,19 +10,22 @@ const ThemeToggle = () => {
       key: THEMES.LIGHT,
       text: 'Light',
       value: THEMES.LIGHT,
-      icon: 'sun'
+      icon: 'sun',
+      description: 'Light theme'
     },
     {
       key: THEMES.DARK,
       text: 'Dark', 
       value: THEMES.DARK,
-      icon: 'moon'
+      icon: 'moon',
+      description: 'Dark theme'
     },
     {
       key: THEMES.AUTO,
       text: 'Auto',
       value: THEMES.AUTO,
-      icon: 'circle outline'
+      icon: 'circle outline',
+      description: 'Follow system preference'
     }
   ];
 
@@ -31,19 +34,34 @@ const ThemeToggle = () => {
     return isDark ? 'moon' : 'sun';
   };
 
+  const getCurrentLabel = () => {
+    if (isAuto) return 'Auto';
+    return isDark ? 'Dark' : 'Light';
+  };
+
   return (
-    <Dropdown
-      trigger={
-        <div className="theme-toggle-btn animated fadeInDown" title="Change theme">
-          <Icon name={getCurrentIcon()} />
-        </div>
-      }
-      options={themeOptions}
-      value={theme}
-      onChange={(e, { value }) => setTheme(value)}
-      direction="left"
-      pointing="top right"
-    />
+    <div className="theme-toggle-wrapper">
+      <Dropdown
+        trigger={
+          <div 
+            className="theme-toggle-btn animated fadeInDown" 
+            title={`Current theme: ${getCurrentLabel()}. Click to change theme`}
+            role="button"
+            tabIndex={0}
+            aria-label="Theme selector"
+          >
+            <Icon name={getCurrentIcon()} />
+          </div>
+        }
+        options={themeOptions}
+        value={theme}
+        onChange={(e, { value }) => setTheme(value)}
+        direction="left"
+        pointing="top right"
+        className="theme-dropdown"
+        aria-label="Select theme"
+      />
+    </div>
   );
 };
 

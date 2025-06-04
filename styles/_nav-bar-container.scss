@@ -30,15 +30,42 @@
     }
     
     // Theme toggle button styles
-    .theme-toggle-btn {
+    .theme-toggle-wrapper {
       display: inline-block;
-      cursor: pointer;
       margin-right: 0.4rem;
-      i {
-        color: var(--text-secondary);
-        transition: color 0.2s ease;
-        &:hover {
-          color: var(--accent-primary);
+      
+      .theme-toggle-btn {
+        display: inline-block;
+        cursor: pointer;
+        i {
+          color: var(--text-secondary);
+          transition: color 0.2s ease;
+          &:hover {
+            color: var(--accent-primary);
+          }
+        }
+      }
+      
+      .theme-dropdown {
+        .menu {
+          background: var(--bg-primary);
+          border: 1px solid var(--border-primary);
+          box-shadow: 0 4px 16px var(--shadow-primary);
+          
+          .item {
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            
+            &:hover {
+              background: var(--bg-hover);
+              color: var(--text-active);
+            }
+            
+            &.selected {
+              background: var(--accent-selection);
+              color: var(--text-active);
+            }
+          }
         }
       }
     }

@@ -19,15 +19,24 @@ const getSystemTheme = () => {
 
 const getStoredTheme = () => {
   if (typeof window !== 'undefined' && window.localStorage) {
-    const stored = localStorage.getItem('codelf-theme');
-    return stored && Object.values(THEMES).includes(stored) ? stored : THEMES.AUTO;
+    try {
+      const stored = localStorage.getItem('codelf-theme');
+      return stored && Object.values(THEMES).includes(stored) ? stored : THEMES.AUTO;
+    } catch (error) {
+      console.warn('Failed to read theme from localStorage:', error);
+      return THEMES.AUTO;
+    }
   }
   return THEMES.AUTO;
 };
 
 const setStoredTheme = (theme) => {
   if (typeof window !== 'undefined' && window.localStorage) {
-    localStorage.setItem('codelf-theme', theme);
+    try {
+      localStorage.setItem('codelf-theme', theme);
+    } catch (error) {
+      console.warn('Failed to save theme to localStorage:', error);
+    }
   }
 };
 
@@ -66,12 +75,24 @@ export function ThemeProvider({ children }) {
         }
       };
       
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
+      // Support both modern and legacy event listener methods
+      if (mediaQuery.addEventListener) {
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+      } else if (mediaQuery.addListener) {
+        // Fallback for older browsers
+        mediaQuery.addListener(handleChange);
+        return () => mediaQuery.removeListener(handleChange);
+      }
     }
   }, [themePreference]);
 
   const setTheme = (newTheme) => {
+    if (!Object.values(THEMES).includes(newTheme)) {
+      console.warn('Invalid theme:', newTheme);
+      return;
+    }
+    
     setThemePreference(newTheme);
     setStoredTheme(newTheme);
     
