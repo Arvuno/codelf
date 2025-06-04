@@ -546,6 +546,7 @@ body.dark .app .main-container .title {
   font-size: 1.3em;
   background: #F1F3F4;
   border-radius: 5rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.04);
   transition: box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .app .main-container .search-bar__input:focus, .app .main-container .search-bar__input:active, .app .main-container .search-bar__input:hover {
@@ -593,6 +594,9 @@ body.dark .app .main-container .title {
     padding-left: 1.4rem;
     font-size: 1rem;
   }
+}
+body.dark .app .main-container .search-bar__input {
+  box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 body.dark .app .main-container .search-bar__input:focus, body.dark .app .main-container .search-bar__input:active, body.dark .app .main-container .search-bar__input:hover {
   box-shadow: rgb(187, 187, 187) 0px 2px 8px !important;
@@ -721,4 +725,4 @@ body.dark .app .notice-container {
   display: block;
 }
 
-/*# sourceMappingURL=test_app_v2.css.map */
+/*# sourceMappingURL=app.css.map */
