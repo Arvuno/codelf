@@ -561,7 +561,7 @@ body.dark .app .main-container .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -0.4rem;
+  margin-top: -0.2rem;
   margin-left: 1rem;
 }
 .app .main-container .search-bar__dropdown i {
@@ -721,4 +721,4 @@ body.dark .app .notice-container {
   display: block;
 }
 
-/*# sourceMappingURL=test_app.css.map */
+/*# sourceMappingURL=test_app_v2.css.map */
