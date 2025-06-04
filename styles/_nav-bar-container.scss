@@ -23,10 +23,36 @@
       margin: 0 !important;
       font-size: 2rem;
       color: #70B7FD;
+      transition: color 0.2s ease;
       &:hover,&:active{
         color: #59AAF9;
       }
     }
+    
+    // Theme toggle button styles
+    .theme-toggle-btn {
+      display: inline-block;
+      cursor: pointer;
+      margin-right: 0.4rem;
+      i {
+        color: var(--text-secondary);
+        transition: color 0.2s ease;
+        &:hover {
+          color: var(--accent-primary);
+        }
+      }
+    }
+    
+    // Dark theme icon colors
+    body.dark & {
+      i {
+        color: var(--text-secondary);
+        &:hover, &:active {
+          color: var(--accent-primary);
+        }
+      }
+    }
+    
     .github-corner {
       margin-top: -0.2rem;
       i {
@@ -38,7 +64,7 @@
     }
     $anim-delay: 150ms;
     $anim-duration: 500ms;
-    @for $i from 1 through 5 {
+    @for $i from 1 through 6 { // Updated to 6 to include theme toggle
       >*:nth-child(#{$i}) {
         animation-duration: $anim-duration;
         animation-delay: 500 + $anim-delay*($i - 1);
