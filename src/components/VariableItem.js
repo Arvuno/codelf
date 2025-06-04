@@ -3,6 +3,8 @@ import { Button, Label, Popup } from 'semantic-ui-react';
 import { useTranslation } from 'react-i18next';
 import * as Tools from '../utils/Tools';
 
+/* global ClipboardJS */
+
 export default function VariableItem(props) {
   const { t } = useTranslation();
   const clipboardId = `clipboardId-${Tools.uuid()}`;

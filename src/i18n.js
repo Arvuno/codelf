@@ -10,7 +10,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    lng: 'en', // default language
+    lng: undefined, // Let language detector determine the language
     debug: false,
     
     // Language detection options
@@ -18,6 +18,17 @@ i18n
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
       lookupLocalStorage: 'codelf-language',
+      convertDetectedLanguage: (lng) => {
+        // Convert Chinese variants to 'zh'
+        if (lng.startsWith('zh')) {
+          return 'zh';
+        }
+        // Convert English variants to 'en'
+        if (lng.startsWith('en')) {
+          return 'en';
+        }
+        return lng;
+      }
     },
 
     interpolation: {
