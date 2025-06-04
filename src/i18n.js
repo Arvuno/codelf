@@ -4,6 +4,9 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './locales/en.json';
 import zh from './locales/zh.json';
+import de from './locales/de.json';
+import fr from './locales/fr.json';
+import ko from './locales/ko.json';
 
 i18n
   .use(LanguageDetector)
@@ -27,6 +30,18 @@ i18n
         if (lng.startsWith('en')) {
           return 'en';
         }
+        // Convert German variants to 'de'
+        if (lng.startsWith('de')) {
+          return 'de';
+        }
+        // Convert French variants to 'fr'
+        if (lng.startsWith('fr')) {
+          return 'fr';
+        }
+        // Convert Korean variants to 'ko'
+        if (lng.startsWith('ko')) {
+          return 'ko';
+        }
         return lng;
       }
     },
@@ -41,6 +56,15 @@ i18n
       },
       zh: {
         translation: zh
+      },
+      de: {
+        translation: de
+      },
+      fr: {
+        translation: fr
+      },
+      ko: {
+        translation: ko
       }
     }
   });
