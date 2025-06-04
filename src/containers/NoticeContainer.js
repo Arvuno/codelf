@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 export default function NoticeContainer() {
   const { t } = useTranslation();
   const listEl = useRef(null);
-  const [activeIndex, setDisable] = useSliderEffect(listEl);
+  const [, setDisable] = useSliderEffect(listEl);
 
   return (
     <div className='notice-container' ref={listEl} onMouseEnter={() => setDisable(true)} onMouseLeave={() => setDisable(false)}>
