@@ -21,13 +21,13 @@ const getStoredTheme = () => {
   if (typeof window !== 'undefined' && window.localStorage) {
     try {
       const stored = localStorage.getItem('codelf-theme');
-      return stored && Object.values(THEMES).includes(stored) ? stored : THEMES.AUTO;
+      return stored && Object.values(THEMES).includes(stored) ? stored : THEMES.LIGHT;
     } catch (error) {
       console.warn('Failed to read theme from localStorage:', error);
-      return THEMES.AUTO;
+      return THEMES.LIGHT;
     }
   }
-  return THEMES.AUTO;
+  return THEMES.LIGHT;
 };
 
 const setStoredTheme = (theme) => {
@@ -48,7 +48,7 @@ const applyTheme = (theme) => {
 };
 
 export function ThemeProvider({ children }) {
-  const [themePreference, setThemePreference] = useState(THEMES.AUTO);
+  const [themePreference, setThemePreference] = useState(THEMES.LIGHT);
   const [actualTheme, setActualTheme] = useState(THEMES.LIGHT);
 
   useEffect(() => {

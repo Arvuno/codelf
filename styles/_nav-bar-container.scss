@@ -33,10 +33,12 @@
     .theme-toggle-wrapper {
       display: inline-block;
       margin-right: 0.4rem;
+      position: relative;
       
       .theme-toggle-btn {
         display: inline-block;
         cursor: pointer;
+        position: relative;
         i {
           color: var(--text-secondary);
           transition: color 0.2s ease;
