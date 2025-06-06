@@ -6,8 +6,7 @@ const languages = [
   { key: 'en', text: 'English', value: 'en', flag: 'us' },
   { key: 'zh', text: '中文', value: 'zh', flag: 'cn' },
   { key: 'de', text: 'Deutsch', value: 'de', flag: 'de' },
-  { key: 'fr', text: 'Français', value: 'fr', flag: 'fr' },
-  { key: 'ko', text: '한국어', value: 'ko', flag: 'kr' }
+  { key: 'fr', text: 'Français', value: 'fr', flag: 'fr' }
 ];
 
 export default function LanguageSwitch() {

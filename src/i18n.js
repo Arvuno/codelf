@@ -6,7 +6,6 @@ import en from './locales/en.json';
 import zh from './locales/zh.json';
 import de from './locales/de.json';
 import fr from './locales/fr.json';
-import ko from './locales/ko.json';
 
 i18n
   .use(LanguageDetector)
@@ -38,10 +37,6 @@ i18n
         if (lng.startsWith('fr')) {
           return 'fr';
         }
-        // Convert Korean variants to 'ko'
-        if (lng.startsWith('ko')) {
-          return 'ko';
-        }
         return lng;
       }
     },
@@ -62,9 +57,6 @@ i18n
       },
       fr: {
         translation: fr
-      },
-      ko: {
-        translation: ko
       }
     }
   });
