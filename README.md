@@ -99,3 +99,6 @@ Screenshots
 ![bnk1](https://cloud.githubusercontent.com/assets/799578/12507895/9945d290-c133-11e5-8bb9-ff5d5dec0cfe.png)
 
 ![bmk2](https://cloud.githubusercontent.com/assets/799578/12507854/5d2d328a-c133-11e5-85eb-d4da1c38a747.png)
+
+## Contributing
+Contributions are welcome! Please open an issue first for significant changes.
